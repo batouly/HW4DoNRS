@@ -95,41 +95,7 @@ for i=1:N-1
     Qd = [Qd qd_n];
 end 
 cartTraj = FK_POS(Q);
-ns = n*N-n;
-figure
-plot(tspan, x )
-hold on 
-T = linspace(0,tf_new,ns);
-plot(T,cartTraj(1,:),'k--')
-grid on
-legend('X_{des}','x_{actual}')
-figure
-plot(tspan, y )
-hold on 
-T = linspace(0,tf_new,ns);
-plot(T,cartTraj(2,:),'k--')
-grid on
-legend('y_{des}','y_{actual}')
-figure
-plot(tspan, z )
-hold on 
-T = linspace(0,tf_new,ns);
-plot(T,cartTraj(3,:),'k--')
-grid on
-legend('z_{des}','z_{actual}')
-figure
-subplot(311)
-plot(T, Q(1,:))
-ylabel('joint 1')
-grid on
-subplot(312)
-plot(T, Q(2,:))
-ylabel('joint 2')
-grid on
-subplot(313)
-plot(T, Q(3,:))
-ylabel('joint 3')
-grid on
+
 
 
 
